@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A896AB49-E29E-4316-98F6-D9309A5F96F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>eat</RootNamespace>
+    <AssemblyName>eat</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEditarOaltaEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEditarOaltaEvento.Designer.cs">
+      <DependentUpon>formEditarOaltaEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEditarOaltaMozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEditarOaltaMozo.Designer.cs">
+      <DependentUpon>formEditarOaltaMozo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form1.Designer.cs">
+      <DependentUpon>form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEvento.Designer.cs">
+      <DependentUpon>FormEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMozos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMozos.Designer.cs">
+      <DependentUpon>formMozos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form1.resx">
+      <DependentUpon>form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEditarOaltaEvento.resx">
+      <DependentUpon>formEditarOaltaEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEditarOaltaMozo.resx">
+      <DependentUpon>formEditarOaltaMozo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEvento.resx">
+      <DependentUpon>FormEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMozos.resx">
+      <DependentUpon>formMozos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\conexionDatos\CONEXIONDATOS.csproj">
+      <Project>{966f2fa6-7c64-455d-a920-e2d35355c98a}</Project>
+      <Name>CONEXIONDATOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DOMINIO\DOMINIO.csproj">
+      <Project>{8fd98e4c-6963-4f68-b9aa-c5245af51c8e}</Project>
+      <Name>DOMINIO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
