@@ -1,0 +1,46 @@
+# ========================
+# ARCHIVO .gitignore PARA WINFORMS EN C#
+# ========================
+
+# Carpeta de compilación
+bin/
+obj/
+
+# Archivos de configuración de usuario
+*.user
+*.suo
+
+# Archivos de base de datos temporales (como los que mostraste)
+*.db
+*.bak
+*.mdf
+*.ldf
+
+# Archivos intermedios de diseño de Visual Studio
+*.vsidx
+*.sdf
+
+# Carpeta de configuración de Visual Studio
+.vs/
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# Archivos de cache del sistema
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Paquetes NuGet
+packages/
+*.nupkg
+
+# Otros temporales
+*.tmp
+*.cache
+
+# Configuraciones de Rider/JetBrains (si usás)
+.idea/
