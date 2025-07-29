@@ -24,33 +24,83 @@ namespace eat
         {
             ClienteConexion clienteConexion = new ClienteConexion();
             List<Cliente> lista = clienteConexion.listar();
+
+            // Limpiar el grid por completo
+            dataGridViewCliente.DataSource = null;
+            dataGridViewCliente.Columns.Clear();
+            dataGridViewCliente.AutoGenerateColumns = false;
+
+            // Crear columnas manualmente (en el orden que quieras)
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_idCliente",
+                HeaderText = "ID"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_nombre",
+                HeaderText = "Nombre"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_apellido",
+                HeaderText = "Apellido"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_correo",
+                HeaderText = "Correo Electrónico"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_telefono",
+                HeaderText = "Teléfono"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_Dni",
+                HeaderText = "DNI"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_observacion",
+                HeaderText = "Observación"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_fechaNacimiento",
+                HeaderText = "Fecha de Nacimiento"
+            });
+
+            dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "_cuil",
+                HeaderText = "CUIL"
+            });
+
+            // ✅ Columna de botón "Editar" al final
+            DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn
+            {
+                Text = "Editar",
+                UseColumnTextForButtonValue = true,
+                Name = "btnEditar",
+                HeaderText = "",
+                Width = 80
+            };
+            dataGridViewCliente.Columns.Add(btnEditar);
+
+            // Asignar el DataSource (ahora no rompe el orden porque las columnas están manuales)
             dataGridViewCliente.DataSource = lista;
-            dataGridViewCliente.Columns["_idCliente"].HeaderText = "ID";
-            dataGridViewCliente.Columns["_nombre"].HeaderText = "Nombre";
-            dataGridViewCliente.Columns["_apellido"].HeaderText = "Apellido";
-            dataGridViewCliente.Columns["_correo"].HeaderText = "Correo Electrónico";
-            dataGridViewCliente.Columns["_telefono"].HeaderText = "Teléfono";
-            dataGridViewCliente.Columns["_Dni"].HeaderText = "DNI";
-            dataGridViewCliente.Columns["_observacion"].HeaderText = "observacion";
-            dataGridViewCliente.Columns["_fechaNacimiento"].HeaderText = "Fecha de nacimiento";
-            dataGridViewCliente.Columns["_cuil"].HeaderText = "Cuil";
-
-            dataGridViewCliente.Columns["_idCliente"].DisplayIndex = 0;
-            dataGridViewCliente.Columns["_nombre"].DisplayIndex = 1;
-            dataGridViewCliente.Columns["_apellido"].DisplayIndex = 2;
-            dataGridViewCliente.Columns["_correo"].DisplayIndex = 3;
-            dataGridViewCliente.Columns["_telefono"].DisplayIndex = 4;
-
-
-
-
-
-
-
-
-
-
         }
+
     }
 }
     

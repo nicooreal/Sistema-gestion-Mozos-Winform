@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|c:\\users\\nico\\documents\\utn\\mis proyectos\\ultima eat solucion\\sistema-gestion-mozos-winform\\nueva eat solucion\\eat-solucion-nueva\\eat\\formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|solutionrelative:eat\\formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|solutionrelative:eat\\formcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formmozos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|solutionrelative:eat\\formmozos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formmozos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|solutionrelative:eat\\formmozos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formeditaroaltamozo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A896AB49-E29E-4316-98F6-D9309A5F96F2}|eat\\eat.csproj|solutionrelative:eat\\formeditaroaltamozo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\FormCliente.cs",
+              "RelativeDocumentMoniker": "eat\\FormCliente.cs",
+              "ToolTip": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\FormCliente.cs",
+              "RelativeToolTip": "eat\\FormCliente.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAcwGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T00:58:54.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\FormCliente.cs",
+              "RelativeDocumentMoniker": "eat\\FormCliente.cs",
+              "ToolTip": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\FormCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "eat\\FormCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T00:58:52.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "formMozos.cs",
+              "DocumentMoniker": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formMozos.cs",
+              "RelativeDocumentMoniker": "eat\\formMozos.cs",
+              "ToolTip": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formMozos.cs",
+              "RelativeToolTip": "eat\\formMozos.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwGoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T00:58:20.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "formMozos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formMozos.cs",
+              "RelativeDocumentMoniker": "eat\\formMozos.cs",
+              "ToolTip": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formMozos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "eat\\formMozos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T00:58:07.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "formEditarOaltaMozo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formEditarOaltaMozo.cs",
+              "RelativeDocumentMoniker": "eat\\formEditarOaltaMozo.cs",
+              "ToolTip": "C:\\Users\\Nico\\Documents\\UTN\\MIS PROYECTOS\\ULTIMA EAT SOLUCION\\Sistema-gestion-Mozos-Winform\\NUEVA EAT SOLUCION\\EAT-SOLUCION-nueva\\eat\\formEditarOaltaMozo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "eat\\formEditarOaltaMozo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T00:57:13.169Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 196,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 88,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

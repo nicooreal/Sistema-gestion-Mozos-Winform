@@ -18,3 +18,23 @@ C:\Users\Nico\Documents\UTN\MIS PROYECTOS\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\
 C:\Users\Nico\Documents\UTN\MIS PROYECTOS\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.FormEvento.resources
 C:\Users\Nico\Documents\UTN\MIS PROYECTOS\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.formEditarOaltaEvento.resources
 C:\Users\Nico\Documents\UTN\MIS PROYECTOS\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.FormCliente.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\bin\Debug\eat.exe.config
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\bin\Debug\eat.exe
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\bin\Debug\eat.pdb
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\bin\Debug\conexionDatos.dll
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\bin\Debug\DOMINIO.dll
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\bin\Debug\conexionDatos.pdb
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\bin\Debug\DOMINIO.pdb
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.csproj.AssemblyReference.cache
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.formPrincipal.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.FormCliente.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.formEditarOaltaEvento.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.formEditarOaltaMozo.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.FormEvento.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.formMozos.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.Properties.Resources.resources
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.csproj.GenerateResource.cache
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.csproj.CoreCompileInputs.cache
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.csproj.Up2Date
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.exe
+C:\Users\Nico\Documents\UTN\MIS PROYECTOS\ULTIMA EAT SOLUCION\Sistema-gestion-Mozos-Winform\NUEVA EAT SOLUCION\EAT-SOLUCION-nueva\eat\obj\Debug\eat.pdb
