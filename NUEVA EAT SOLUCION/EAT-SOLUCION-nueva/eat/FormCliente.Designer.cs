@@ -35,7 +35,7 @@
             // dataGridViewCliente
             // 
             this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCliente.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewCliente.Location = new System.Drawing.Point(2, 12);
             this.dataGridViewCliente.Name = "dataGridViewCliente";
             this.dataGridViewCliente.Size = new System.Drawing.Size(964, 301);
             this.dataGridViewCliente.TabIndex = 1;

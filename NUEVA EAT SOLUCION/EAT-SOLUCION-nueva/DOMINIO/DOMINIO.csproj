@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="cliente.cs" />
     <Compile Include="evento.cs" />
-    <Compile Include="mozo.cs" />
+    <Compile Include="Cliente_1.cs" />
     <Compile Include="persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

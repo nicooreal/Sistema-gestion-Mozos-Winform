@@ -12,41 +12,41 @@ using System.Windows.Forms;
 
 namespace eat
 {
-    public partial class formEditarOaltaMozo : Form
+    public partial class formEditarOaltaCliente : Form
     {
 
-        private Mozo mozoSeleccionado;
+        private Cliente clienteSeleccionado;
 
-        public Action OnMozoEditado { get; set; } // Delegate para notificar edición
+        public Action OnClienteEditado { get; set; } // Delegate para notificar edición
 
 
-        public formEditarOaltaMozo(Mozo mozo)
+        public formEditarOaltaCliente(Cliente mozo)
         {
             InitializeComponent();
-            this.mozoSeleccionado = mozo;
+            this.clienteSeleccionado = mozo;
 
 
-            if (mozoSeleccionado != null) { 
+            if (clienteSeleccionado != null) { 
             
-                textBoxLegajo.Text = mozoSeleccionado._legajo.ToString();
+                textBoxLegajo.Text = clienteSeleccionado._legajo.ToString();
                 textBoxLegajo.ReadOnly = true;
                 
-                textBoxNombre.Text = mozoSeleccionado._nombre;
-                textBoxApellido.Text = mozoSeleccionado._apellido;
-                textBoxDni.Text = mozoSeleccionado._dni.ToString();
+                textBoxNombre.Text = clienteSeleccionado._nombre;
+                textBoxApellido.Text = clienteSeleccionado._apellido;
+                textBoxDni.Text = clienteSeleccionado._dni.ToString();
               
 
-                textBoxCuil.Text = mozoSeleccionado._cuil.ToString();
-                textBoxTelefono.Text = mozoSeleccionado._telefono;
-                textBoxCorreo.Text = mozoSeleccionado._correo;
-                textBoxAltaEventual.Text = mozoSeleccionado._altaEventual;
-                checkBoxDisponible.Checked = mozoSeleccionado._disponible;
-                checkBoxActivado.Checked = mozoSeleccionado._activado;
+                textBoxCuil.Text = clienteSeleccionado._cuil.ToString();
+                textBoxTelefono.Text = clienteSeleccionado._telefono;
+                textBoxCorreo.Text = clienteSeleccionado._correo;
+                textBoxAltaEventual.Text = clienteSeleccionado._altaEventual;
+                checkBoxDisponible.Checked = clienteSeleccionado._disponible;
+                checkBoxActivado.Checked = clienteSeleccionado._activado;
 
-                dateTimePickerFechaAlta.Value = mozoSeleccionado._fechaAlta;
-                dateTimePickerFechaNacimiento.Value = mozoSeleccionado._fechaNacimiento;
-                textBoxCategoria.Text = mozoSeleccionado._categoria;
-                textBoxTarea.Text = mozoSeleccionado._tarea;
+                dateTimePickerFechaAlta.Value = clienteSeleccionado._fechaAlta;
+                dateTimePickerFechaNacimiento.Value = clienteSeleccionado._fechaNacimiento;
+                textBoxCategoria.Text = clienteSeleccionado._categoria;
+                textBoxTarea.Text = clienteSeleccionado._tarea;
 
             }
             
@@ -73,7 +73,7 @@ namespace eat
             
             MozoConexion mozoConec = new MozoConexion();
 
-            Mozo mozoCambiado = new Mozo();
+            Cliente mozoCambiado = new Cliente();
      
 
             if (string.IsNullOrWhiteSpace(textBoxNombre.Text) ||

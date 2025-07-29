@@ -13,7 +13,7 @@ namespace CONEXIONDATOS
     {
 
 
-        public void agregarMozo(Mozo mozoNuevo)
+        public void agregarMozo(Cliente mozoNuevo)
         {
             AccesoDatos datosPersona = new AccesoDatos();
             AccesoDatos datosMozo = new AccesoDatos();
@@ -88,9 +88,9 @@ namespace CONEXIONDATOS
         }
 
 
-        public List<Mozo> listar()
+        public List<Cliente> listar()
         {
-            List<Mozo> lista = new List<Mozo>();
+            List<Cliente> lista = new List<Cliente>();
             AccesoDatos Dat = new AccesoDatos();
 
             try
@@ -101,7 +101,7 @@ namespace CONEXIONDATOS
                 while (Dat.Lector.Read())
                 {
                     
-                    Mozo mozoDat = new Mozo();
+                    Cliente mozoDat = new Cliente();
            
 
                     if (!(Dat.Lector["Dni"] is DBNull))
@@ -171,7 +171,7 @@ namespace CONEXIONDATOS
             }
         }
 
-        public  int  cambiarPropiedad(Mozo mozo)
+        public  int  cambiarPropiedad(Cliente mozo)
         {
             AccesoDatos datosPersona = new AccesoDatos();
             AccesoDatos datosMozo = new AccesoDatos();
@@ -249,9 +249,9 @@ WHERE M.Legajo = @Legajo"
     
 
 
-    public List<Mozo> listarActivados()
+    public List<Cliente> listarActivados()
         {
-            List<Mozo> lista = new List<Mozo>();
+            List<Cliente> lista = new List<Cliente>();
             lista = listar();
 
             for (int i = 0; i < lista.Count; i++)
@@ -271,9 +271,9 @@ WHERE M.Legajo = @Legajo"
         }
 
 
-        public List<Mozo> listarDisponibles()
+        public List<Cliente> listarDisponibles()
         {
-            List<Mozo> lista = new List<Mozo>();
+            List<Cliente> lista = new List<Cliente>();
             lista = listar();
             
             for (int i = 0; i < lista.Count; i++)
