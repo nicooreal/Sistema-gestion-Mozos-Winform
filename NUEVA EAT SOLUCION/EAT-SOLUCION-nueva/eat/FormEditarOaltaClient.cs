@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace eat
 {
-    public partial class FormEditarOaltaCliente : Form
+    public partial class FormEditarOaltaClient : Form
     {
-        public FormEditarOaltaCliente()
+        public FormEditarOaltaClient()
         {
             InitializeComponent();
         }

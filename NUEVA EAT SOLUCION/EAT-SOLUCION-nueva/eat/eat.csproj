@@ -52,11 +52,11 @@
     <Compile Include="FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditarOaltaCliente.cs">
+    <Compile Include="FormEditarOaltaClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditarOaltaCliente.Designer.cs">
-      <DependentUpon>FormEditarOaltaCliente.cs</DependentUpon>
+    <Compile Include="FormEditarOaltaClient.Designer.cs">
+      <DependentUpon>FormEditarOaltaClient.cs</DependentUpon>
     </Compile>
     <Compile Include="formEditarOaltaEvento.cs">
       <SubType>Form</SubType>
@@ -96,8 +96,8 @@
     <EmbeddedResource Include="FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditarOaltaCliente.resx">
-      <DependentUpon>FormEditarOaltaCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FormEditarOaltaClient.resx">
+      <DependentUpon>FormEditarOaltaClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formEditarOaltaEvento.resx">
       <DependentUpon>formEditarOaltaEvento.cs</DependentUpon>

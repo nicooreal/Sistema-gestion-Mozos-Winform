@@ -1,6 +1,6 @@
 ﻿namespace eat
 {
-    partial class formEditarOaltaCliente
+    partial class formEditarOaltaMozo
     {
         /// <summary>
         /// Required designer variable.
@@ -20,14 +20,14 @@
             base.Dispose(disposing);
         }
 
-                #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-                /// <summary>
-                /// Required method for Designer support - do not modify
-                /// the contents of this method with the code editor.
-                /// </summary>
-                private void InitializeComponent()
-                {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.textBoxLegajo = new System.Windows.Forms.TextBox();
             this.textBoxAltaEventual = new System.Windows.Forms.TextBox();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
@@ -350,9 +350,9 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-                }
+        }
 
-                #endregion
+        #endregion
 
         private System.Windows.Forms.TextBox textBoxLegajo;
         private System.Windows.Forms.TextBox textBoxAltaEventual;

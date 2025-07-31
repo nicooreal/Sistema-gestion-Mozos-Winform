@@ -12,69 +12,70 @@ using System.Windows.Forms;
 
 namespace eat
 {
-    public partial class formEditarOaltaCliente : Form
+    public partial class formEditarOaltaMozo : Form
     {
 
-        private Cliente clienteSeleccionado;
+        private Mozo mozoSeleccionado;
 
-        public Action OnClienteEditado { get; set; } // Delegate para notificar edición
+        public Action OnMozoEditado { get; set; } // Delegate para notificar edición
 
 
-        public formEditarOaltaCliente(Cliente mozo)
+        public formEditarOaltaMozo(Mozo mozo)
         {
             InitializeComponent();
-            this.clienteSeleccionado = mozo;
+            this.mozoSeleccionado = mozo;
 
 
-            if (clienteSeleccionado != null) { 
-            
-                textBoxLegajo.Text = clienteSeleccionado._legajo.ToString();
+            if (mozoSeleccionado != null)
+            {
+
+                textBoxLegajo.Text = mozoSeleccionado._legajo.ToString();
                 textBoxLegajo.ReadOnly = true;
-                
-                textBoxNombre.Text = clienteSeleccionado._nombre;
-                textBoxApellido.Text = clienteSeleccionado._apellido;
-                textBoxDni.Text = clienteSeleccionado._dni.ToString();
-              
 
-                textBoxCuil.Text = clienteSeleccionado._cuil.ToString();
-                textBoxTelefono.Text = clienteSeleccionado._telefono;
-                textBoxCorreo.Text = clienteSeleccionado._correo;
-                textBoxAltaEventual.Text = clienteSeleccionado._altaEventual;
-                checkBoxDisponible.Checked = clienteSeleccionado._disponible;
-                checkBoxActivado.Checked = clienteSeleccionado._activado;
+                textBoxNombre.Text = mozoSeleccionado._nombre;
+                textBoxApellido.Text = mozoSeleccionado._apellido;
+                textBoxDni.Text = mozoSeleccionado._dni.ToString();
 
-                dateTimePickerFechaAlta.Value = clienteSeleccionado._fechaAlta;
-                dateTimePickerFechaNacimiento.Value = clienteSeleccionado._fechaNacimiento;
-                textBoxCategoria.Text = clienteSeleccionado._categoria;
-                textBoxTarea.Text = clienteSeleccionado._tarea;
+
+                textBoxCuil.Text = mozoSeleccionado._cuil.ToString();
+                textBoxTelefono.Text = mozoSeleccionado._telefono;
+                textBoxCorreo.Text = mozoSeleccionado._correo;
+                textBoxAltaEventual.Text = mozoSeleccionado._altaEventual;
+                checkBoxDisponible.Checked = mozoSeleccionado._disponible;
+                checkBoxActivado.Checked = mozoSeleccionado._activado;
+
+                dateTimePickerFechaAlta.Value = mozoSeleccionado._fechaAlta;
+                dateTimePickerFechaNacimiento.Value = mozoSeleccionado._fechaNacimiento;
+                textBoxCategoria.Text = mozoSeleccionado._categoria;
+                textBoxTarea.Text = mozoSeleccionado._tarea;
 
             }
-            
+
             else
-            
+
             {
                 MozoConexion mozoConec = new MozoConexion();
                 int cantidadMozos = mozoConec.cantidadMozos() + 1;
-                
+
                 textBoxLegajo.Text = cantidadMozos.ToString();
                 textBoxLegajo.ReadOnly = true;
 
 
             }
 
-            
+
         }
 
-     
+
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-         
-            
+
+
             MozoConexion mozoConec = new MozoConexion();
 
-            Cliente mozoCambiado = new Cliente();
-     
+            Mozo mozoCambiado = new Mozo();
+
 
             if (string.IsNullOrWhiteSpace(textBoxNombre.Text) ||
                 string.IsNullOrWhiteSpace(textBoxApellido.Text) ||
@@ -86,12 +87,12 @@ namespace eat
                 string.IsNullOrWhiteSpace(textBoxCategoria.Text) ||
                 string.IsNullOrWhiteSpace(textBoxTarea.Text) ||
                 string.IsNullOrWhiteSpace(textBoxLegajo.Text))
-            
+
             {
                 MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            } 
-            
+            }
+
             else
             {
 
@@ -103,20 +104,20 @@ namespace eat
                     return;
                 }
 
-                  mozoCambiado._nombre = textBoxNombre.Text;
-                  mozoCambiado._apellido = textBoxApellido.Text;
-                  mozoCambiado._dni = int.Parse(textBoxDni.Text);
-                  mozoCambiado._cuil = long.Parse(textBoxCuil.Text);
-                  mozoCambiado._telefono = textBoxTelefono.Text;
-                  mozoCambiado._correo = textBoxCorreo.Text;
-                  mozoCambiado._altaEventual = textBoxAltaEventual.Text;
-                  mozoCambiado._disponible = checkBoxDisponible.Checked;
-                  mozoCambiado._activado = checkBoxActivado.Checked;
-                  mozoCambiado._fechaAlta = dateTimePickerFechaAlta.Value;
-                  mozoCambiado._fechaNacimiento = dateTimePickerFechaNacimiento.Value;
-                  mozoCambiado._categoria = textBoxCategoria.Text;
-                  mozoCambiado._tarea = textBoxTarea.Text;
-                  mozoCambiado._legajo = int.Parse(textBoxLegajo.Text);
+                mozoCambiado._nombre = textBoxNombre.Text;
+                mozoCambiado._apellido = textBoxApellido.Text;
+                mozoCambiado._dni = int.Parse(textBoxDni.Text);
+                mozoCambiado._cuil = long.Parse(textBoxCuil.Text);
+                mozoCambiado._telefono = textBoxTelefono.Text;
+                mozoCambiado._correo = textBoxCorreo.Text;
+                mozoCambiado._altaEventual = textBoxAltaEventual.Text;
+                mozoCambiado._disponible = checkBoxDisponible.Checked;
+                mozoCambiado._activado = checkBoxActivado.Checked;
+                mozoCambiado._fechaAlta = dateTimePickerFechaAlta.Value;
+                mozoCambiado._fechaNacimiento = dateTimePickerFechaNacimiento.Value;
+                mozoCambiado._categoria = textBoxCategoria.Text;
+                mozoCambiado._tarea = textBoxTarea.Text;
+                mozoCambiado._legajo = int.Parse(textBoxLegajo.Text);
 
 
             }
@@ -125,32 +126,32 @@ namespace eat
 
 
 
-            if (int.Parse(textBoxLegajo.Text) > mozoConec.cantidadMozos()) 
-            
+            if (int.Parse(textBoxLegajo.Text) > mozoConec.cantidadMozos())
+
             {
-            
-            mozoConec.agregarMozo(mozoCambiado);
+
+                mozoConec.agregarMozo(mozoCambiado);
                 MessageBox.Show("¡Mozo nuevo agregado!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OnMozoEditado?.Invoke();
                 ActiveForm.Close();
 
-            } 
-            
+            }
+
             else
-            
+
             {
 
 
-            mozoConec.cambiarPropiedad(mozoCambiado);
-            MessageBox.Show("¡Cambios guardados exitosamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            OnMozoEditado?.Invoke();
-            ActiveForm.Close();
+                mozoConec.cambiarPropiedad(mozoCambiado);
+                MessageBox.Show("¡Cambios guardados exitosamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                OnMozoEditado?.Invoke();
+                ActiveForm.Close();
 
 
-           
+
             }
-            
-         
+
+
 
 
 
@@ -159,8 +160,8 @@ namespace eat
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-           
-           
+
+
             this.Close();
         }
     }

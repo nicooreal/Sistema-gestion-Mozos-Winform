@@ -1,6 +1,6 @@
 ﻿namespace eat
 {
-    partial class FormEditarOaltaCliente
+    partial class FormEditarOaltaClient
     {
         /// <summary>
         /// Required designer variable.

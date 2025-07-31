@@ -39,7 +39,7 @@ namespace eat
 
 
                 MozoConexion conec = new MozoConexion();
-                List<Cliente> lista = conec.listarActivados();
+                List<Mozo> lista = conec.listarActivados();
                 dataGridViewMozos.DataSource = lista;
                 dataGridViewMozos.Columns["_legajo"].HeaderText = "Legajo";
                 dataGridViewMozos.Columns["_nombre"].HeaderText = "Nombre";
@@ -130,7 +130,7 @@ namespace eat
 
 
                 MozoConexion conec = new MozoConexion();
-                List<Cliente> lista = conec.listarDisponibles();
+                List<Mozo> lista = conec.listarDisponibles();
                 dataGridViewMozos.DataSource = lista;
                 dataGridViewMozos.Columns["_legajo"].HeaderText = "Legajo";
                 dataGridViewMozos.Columns["_nombre"].HeaderText = "Nombre";
@@ -225,7 +225,7 @@ namespace eat
             
                 
                 MozoConexion conec = new MozoConexion();
-                List<Cliente> lista = conec.listar();
+                List<Mozo> lista = conec.listar();
                 dataGridViewMozos.DataSource = lista;
                 dataGridViewMozos.Columns["_legajo"].HeaderText = "Legajo";
                 dataGridViewMozos.Columns["_nombre"].HeaderText = "Nombre";
@@ -337,9 +337,9 @@ namespace eat
             if (dataGridViewMozos.Columns[e.ColumnIndex].Name == "btnEditar" && e.RowIndex >= 0)
             {
               
-                Cliente mozoSeleccionado = (Cliente)dataGridViewMozos.Rows[e.RowIndex].DataBoundItem;
+               Mozo mozoSeleccionado = (Mozo)dataGridViewMozos.Rows[e.RowIndex].DataBoundItem;
 
-                formEditarOaltaCliente nuevoFormEditMozo = new formEditarOaltaMozo(mozoSeleccionado);
+                formEditarOaltaMozo nuevoFormEditMozo = new formEditarOaltaMozo(mozoSeleccionado);
 
 
                 nuevoFormEditMozo.OnMozoEditado = () =>
@@ -361,7 +361,7 @@ namespace eat
         private void aGREGARMOZOToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            formEditarOaltaCliente nuevoForm = new formEditarOaltaMozo(null);
+            formEditarOaltaMozo nuevoForm = new formEditarOaltaMozo(null);
             nuevoForm.ShowDialog();
             cargarGridView();
         }

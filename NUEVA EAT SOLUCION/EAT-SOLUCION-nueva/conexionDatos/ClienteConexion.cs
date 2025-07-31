@@ -8,9 +8,9 @@ namespace conexionDatos
 {
     public class ClienteConexion
     {
-        public List<Cliente> listar()
+        public List<cliente> listar()
         {
-            List<Cliente> lista = new List<Cliente>();
+            List<cliente> lista = new List<cliente>();
             AccesoDatos datos = new AccesoDatos();
 
             try
@@ -20,7 +20,7 @@ namespace conexionDatos
 
                 while (datos.Lector.Read())
                 {
-                    Cliente cliente = new Cliente();
+                    cliente cliente = new cliente();
 
                     cliente._idCliente = (int)datos.Lector["IdCliente"];
                     cliente._nombre = datos.Lector["Nombre"].ToString();
@@ -50,7 +50,7 @@ namespace conexionDatos
             return lista;
         }
 
-        public int cambiarPropiedad(Cliente cliente)
+        public int cambiarPropiedad(cliente cliente)
         {
             AccesoDatos datos = new AccesoDatos();
 

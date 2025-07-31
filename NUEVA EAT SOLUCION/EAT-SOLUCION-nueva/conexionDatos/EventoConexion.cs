@@ -23,7 +23,7 @@ namespace conexionDatos
                 while (Dat.Lector.Read())
                 {
                     Evento eventoAux = new Evento();
-                    Cliente clienteAux = new Cliente();
+                    cliente clienteAux = new cliente();
                   
                     eventoAux._cliente = clienteAux;
                     

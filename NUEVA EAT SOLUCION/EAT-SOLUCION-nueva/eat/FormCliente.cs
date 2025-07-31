@@ -23,7 +23,7 @@ namespace eat
         public void cargarGridView()
         {
             ClienteConexion clienteConexion = new ClienteConexion();
-            List<Cliente> lista = clienteConexion.listar();
+            List<cliente> lista = clienteConexion.listar();
 
             // Limpiar el grid por completo
             dataGridViewCliente.DataSource = null;
