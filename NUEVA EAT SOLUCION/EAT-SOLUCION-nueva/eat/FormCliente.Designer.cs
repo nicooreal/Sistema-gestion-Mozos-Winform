@@ -20,13 +20,43 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+            #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
+            /// <summary>
+            /// Required method for Designer support - do not modify
+            /// the contents of this method with the code editor.
+            /// </summary>
+            private void InitializeComponent()
+            {
+            this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridViewCliente
+            // 
+            this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCliente.Location = new System.Drawing.Point(2, 12);
+            this.dataGridViewCliente.Name = "dataGridViewCliente";
+            this.dataGridViewCliente.Size = new System.Drawing.Size(1113, 301);
+            this.dataGridViewCliente.TabIndex = 1;
+            this.dataGridViewCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCliente_CellContentClick);
+            // 
+            // FormCliente
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1235, 450);
+            this.Controls.Add(this.dataGridViewCliente);
+            this.Name = "FormCliente";
+            this.Text = "FormCliente";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
+            this.ResumeLayout(false);
+
+            }
+
+            #endregion
+
+        private void initializeComponent()
         {
             this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
@@ -50,10 +80,9 @@
             this.Text = "FormCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
             this.ResumeLayout(false);
-
+            this.dataGridViewCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCliente_CellContentClick);
         }
 
-        #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewCliente;
     }

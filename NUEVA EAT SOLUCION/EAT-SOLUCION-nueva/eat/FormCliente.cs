@@ -101,6 +101,33 @@ namespace eat
             dataGridViewCliente.DataSource = lista;
         }
 
+
+        private void dataGridViewCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verificá que no sea un clic en el encabezado y que sea la columna del botón
+            if (e.RowIndex >= 0 && dataGridViewCliente.Columns[e.ColumnIndex].Name == "btnEditar")
+            {
+                // Obtener el cliente seleccionado
+                var clienteSeleccionado = (cliente)dataGridViewCliente.Rows[e.RowIndex].DataBoundItem;
+
+                // Abrir formulario de edición, pasando el cliente
+                FormEditarOaltaCliente formEditar = new FormEditarOaltaCliente(clienteSeleccionado);
+              
+                formEditar.ShowDialog();
+               
+                // Volver a cargar los datos después de editar
+                cargarGridView();
+            }
+        }
+
+
+
+
+
+
+
+
+
     }
 }
     

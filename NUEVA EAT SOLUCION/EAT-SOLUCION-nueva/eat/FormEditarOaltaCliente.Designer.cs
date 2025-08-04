@@ -1,6 +1,6 @@
 ﻿namespace eat
 {
-    partial class FormEditarOaltaClient
+    partial class FormEditarOaltaCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.labelID.Size = new System.Drawing.Size(18, 13);
             this.labelID.TabIndex = 9;
             this.labelID.Text = "ID";
-            this.labelID.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // labelDni
             // 

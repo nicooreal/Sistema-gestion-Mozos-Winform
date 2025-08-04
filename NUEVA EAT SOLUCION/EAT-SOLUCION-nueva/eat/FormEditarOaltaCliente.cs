@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOMINIO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,18 @@ using System.Windows.Forms;
 
 namespace eat
 {
-    public partial class FormEditarOaltaClient : Form
+    public partial class FormEditarOaltaCliente : Form
     {
-        public FormEditarOaltaClient()
+        public FormEditarOaltaCliente()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public FormEditarOaltaCliente(cliente cli)
         {
-
+            InitializeComponent();
         }
+
+
     }
 }
