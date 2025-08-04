@@ -8,9 +8,9 @@ namespace conexionDatos
 {
     public class ClienteConexion
     {
-        public List<cliente> listar()
+        public List<Cliente> listar()
         {
-            List<cliente> lista = new List<cliente>();
+            List<Cliente> lista = new List<Cliente>();
             AccesoDatos datos = new AccesoDatos();
 
             try
@@ -20,7 +20,7 @@ namespace conexionDatos
 
                 while (datos.Lector.Read())
                 {
-                    cliente cliente = new cliente();
+                    Cliente cliente = new Cliente();
 
                     cliente._idCliente = (int)datos.Lector["IdCliente"];
                     cliente._nombre = datos.Lector["Nombre"].ToString();
@@ -50,36 +50,131 @@ namespace conexionDatos
             return lista;
         }
 
-        public int cambiarPropiedad(cliente cliente)
+        public int cambiarPropiedad(Cliente cliente)
         {
-            AccesoDatos datos = new AccesoDatos();
+            AccesoDatos datosPersona = new AccesoDatos();
+            AccesoDatos datosCliente = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta(@"
-                    UPDATE Cliente
-                    SET 
-                        Nombre = @Nombre,
-                        Apellido = @Apellido,
-                        CorreoElectronico = @Correo,
-                        Telefono = @Telefono
-                    WHERE Id = @Id
-                ");
+                // Actualiza la tabla Persona usando el IdPersona obtenido a través de Cliente
+                datosPersona.setearConsulta(@"
+            UPDATE P
+            SET 
+                P.Dni = @Dni,
+                P.Nombre = @Nombre,
+                P.Apellido = @Apellido,
+                P.Cuil = @Cuil,
+                P.FechaNacimiento = @FechaNacimiento,
+                P.Correo = @Correo,
+                P.Telefono = @Telefono
+            FROM Persona P
+            INNER JOIN Cliente C ON P.IdPersona = C.IdPersona
+            WHERE C.IdCliente = @IdCliente
+        ");
 
-                datos.setearParametro("@Nombre", cliente._nombre);
-                datos.setearParametro("@Apellido", cliente._apellido);
-                datos.setearParametro("@Correo", cliente._correo);
-                datos.setearParametro("@Telefono", cliente._telefono);
-                datos.setearParametro("@Id", cliente._idCliente);
+                datosPersona.setearParametro("@Dni", cliente._dni);
+                datosPersona.setearParametro("@Nombre", cliente._nombre);
+                datosPersona.setearParametro("@Apellido", cliente._apellido);
+                datosPersona.setearParametro("@Cuil", cliente._cuil);
+                datosPersona.setearParametro("@FechaNacimiento", cliente._fechaNacimiento);
+                datosPersona.setearParametro("@Correo", cliente._correo);
+                datosPersona.setearParametro("@Telefono", cliente._telefono);
+                datosPersona.setearParametro("@IdCliente", cliente._idCliente);
 
-                datos.ejecutarAccion();
+                datosPersona.ejecutarAccion();
+
+                // Ahora actualiza la tabla Cliente
+                datosCliente.setearConsulta(@"
+            UPDATE Cliente
+            SET Observacion = @Observacion
+            WHERE IdCliente = @IdCliente
+        ");
+
+                datosCliente.setearParametro("@Observacion", cliente._observacion);
+                datosCliente.setearParametro("@IdCliente", cliente._idCliente);
+
+                datosCliente.ejecutarAccion();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            finally
+            {
+                datosPersona.cerrarConexion();
+                datosCliente.cerrarConexion();
+            }
 
             return 0;
         }
+
+
+        public void agregarCliente(Cliente clienteNuevo)
+        {
+            AccesoDatos datosPersona = new AccesoDatos();
+            AccesoDatos datosCliente = new AccesoDatos();
+
+            try
+            {
+                // INSERTAR EN PERSONA Y OBTENER IdPersona
+                datosPersona.setearConsulta(@"INSERT INTO Persona (Dni, Nombre, Apellido, Cuil, FechaNacimiento, Correo, Telefono) 
+                                      OUTPUT INSERTED.IdPersona 
+                                      VALUES (@Dni, @Nombre, @Apellido, @Cuil, @FechaNacimiento, @Correo, @Telefono)");
+
+                datosPersona.setearParametro("@Dni", clienteNuevo._dni);
+                datosPersona.setearParametro("@Nombre", clienteNuevo._nombre);
+                datosPersona.setearParametro("@Apellido", clienteNuevo._apellido);
+                datosPersona.setearParametro("@Cuil", clienteNuevo._cuil);
+                datosPersona.setearParametro("@FechaNacimiento", clienteNuevo._fechaNacimiento);
+                datosPersona.setearParametro("@Correo", clienteNuevo._correo);
+                datosPersona.setearParametro("@Telefono", clienteNuevo._telefono);
+
+                int idPersona = (int)datosPersona.ejecutarScalar(); // ← Obtener el IdPersona insertado
+
+                // INSERTAR EN CLIENTE
+                datosCliente.setearConsulta(@"INSERT INTO Cliente (IdPersona, Observacion) 
+                                      VALUES (@IdPersona, @Observacion)");
+
+                datosCliente.setearParametro("@IdPersona", idPersona);
+                datosCliente.setearParametro("@Observacion", clienteNuevo._observacion);
+
+                datosCliente.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datosPersona.cerrarConexion();
+                datosCliente.cerrarConexion();
+            }
+        }
+
+        public int obtenerUltimoIdCliente()
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("SELECT ISNULL(MAX(IdCliente), 0) FROM Cliente");
+                return (int)datos.ejecutarScalar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+
+
+
+
     }
 }

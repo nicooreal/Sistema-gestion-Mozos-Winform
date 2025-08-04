@@ -50,6 +50,7 @@ namespace eat
                 // Ajustar anchos si es necesario
                 dataGridViewEventos.Columns["_nombre"].Width = 200;
                 dataGridViewEventos.Columns["_lugar"].Width = 150;
+                dataGridViewEventos.Columns["_observacion"].Width = 400; // valor en píxeles
 
                 //dataGridViewEventos.Columns["_estado"].DisplayIndex = -1;
                 dataGridViewEventos.Columns["_id"].DisplayIndex = 0;

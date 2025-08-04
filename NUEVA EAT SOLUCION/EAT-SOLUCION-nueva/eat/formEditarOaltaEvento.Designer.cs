@@ -62,21 +62,21 @@
             this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(485, 80);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
             this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(230, 20);
-            this.dateTimePickerFechaInicio.TabIndex = 61;
+            this.dateTimePickerFechaInicio.TabIndex = 7;
             // 
             // dateTimePickerFechaFinal
             // 
             this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(485, 107);
             this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
             this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(230, 20);
-            this.dateTimePickerFechaFinal.TabIndex = 60;
+            this.dateTimePickerFechaFinal.TabIndex = 8;
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Location = new System.Drawing.Point(507, 305);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelar.TabIndex = 59;
+            this.buttonCancelar.TabIndex = 14;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
@@ -87,7 +87,7 @@
             this.buttonAceptar.Location = new System.Drawing.Point(211, 305);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAceptar.TabIndex = 58;
+            this.buttonAceptar.TabIndex = 13;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
@@ -178,42 +178,42 @@
             this.textBoxCantidadDeInvitados.Location = new System.Drawing.Point(152, 184);
             this.textBoxCantidadDeInvitados.Name = "textBoxCantidadDeInvitados";
             this.textBoxCantidadDeInvitados.Size = new System.Drawing.Size(204, 20);
-            this.textBoxCantidadDeInvitados.TabIndex = 43;
+            this.textBoxCantidadDeInvitados.TabIndex = 5;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(152, 132);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(204, 20);
-            this.textBoxNombre.TabIndex = 42;
+            this.textBoxNombre.TabIndex = 3;
             // 
             // textBoxLugar
             // 
             this.textBoxLugar.Location = new System.Drawing.Point(485, 158);
             this.textBoxLugar.Name = "textBoxLugar";
             this.textBoxLugar.Size = new System.Drawing.Size(230, 20);
-            this.textBoxLugar.TabIndex = 38;
+            this.textBoxLugar.TabIndex = 10;
             // 
             // textBoxTipoEvento
             // 
             this.textBoxTipoEvento.Location = new System.Drawing.Point(485, 132);
             this.textBoxTipoEvento.Name = "textBoxTipoEvento";
             this.textBoxTipoEvento.Size = new System.Drawing.Size(230, 20);
-            this.textBoxTipoEvento.TabIndex = 37;
+            this.textBoxTipoEvento.TabIndex = 9;
             // 
             // textBoxDireccion
             // 
             this.textBoxDireccion.Location = new System.Drawing.Point(152, 158);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(204, 20);
-            this.textBoxDireccion.TabIndex = 35;
+            this.textBoxDireccion.TabIndex = 4;
             // 
             // textBoxID
             // 
             this.textBoxID.Location = new System.Drawing.Point(152, 106);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(70, 20);
-            this.textBoxID.TabIndex = 34;
+            this.textBoxID.TabIndex = 2;
             // 
             // label1
             // 
@@ -238,14 +238,14 @@
             this.textBoxPresupuesto.Location = new System.Drawing.Point(485, 184);
             this.textBoxPresupuesto.Name = "textBoxPresupuesto";
             this.textBoxPresupuesto.Size = new System.Drawing.Size(230, 20);
-            this.textBoxPresupuesto.TabIndex = 65;
+            this.textBoxPresupuesto.TabIndex = 11;
             // 
             // textBoxEstado
             // 
             this.textBoxEstado.Location = new System.Drawing.Point(152, 80);
             this.textBoxEstado.Name = "textBoxEstado";
             this.textBoxEstado.Size = new System.Drawing.Size(204, 20);
-            this.textBoxEstado.TabIndex = 67;
+            this.textBoxEstado.TabIndex = 1;
             // 
             // label2
             // 
@@ -261,7 +261,7 @@
             this.textBoxObservacion.Location = new System.Drawing.Point(485, 210);
             this.textBoxObservacion.Name = "textBoxObservacion";
             this.textBoxObservacion.Size = new System.Drawing.Size(230, 20);
-            this.textBoxObservacion.TabIndex = 68;
+            this.textBoxObservacion.TabIndex = 12;
             // 
             // label3
             // 
@@ -277,7 +277,7 @@
             this.textBoxCliente.Location = new System.Drawing.Point(152, 214);
             this.textBoxCliente.Name = "textBoxCliente";
             this.textBoxCliente.Size = new System.Drawing.Size(204, 20);
-            this.textBoxCliente.TabIndex = 70;
+            this.textBoxCliente.TabIndex = 6;
             // 
             // formEditarOaltaEvento
             // 

@@ -23,7 +23,7 @@ namespace eat
         public void cargarGridView()
         {
             ClienteConexion clienteConexion = new ClienteConexion();
-            List<cliente> lista = clienteConexion.listar();
+            List<Cliente> lista = clienteConexion.listar();
 
             // Limpiar el grid por completo
             dataGridViewCliente.DataSource = null;
@@ -71,7 +71,8 @@ namespace eat
             dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "_observacion",
-                HeaderText = "Observación"
+                HeaderText = "Observación",
+                              Width = 400
             });
 
             dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
@@ -108,7 +109,7 @@ namespace eat
             if (e.RowIndex >= 0 && dataGridViewCliente.Columns[e.ColumnIndex].Name == "btnEditar")
             {
                 // Obtener el cliente seleccionado
-                var clienteSeleccionado = (cliente)dataGridViewCliente.Rows[e.RowIndex].DataBoundItem;
+                var clienteSeleccionado = (Cliente)dataGridViewCliente.Rows[e.RowIndex].DataBoundItem;
 
                 // Abrir formulario de edición, pasando el cliente
                 FormEditarOaltaCliente formEditar = new FormEditarOaltaCliente(clienteSeleccionado);
@@ -121,13 +122,12 @@ namespace eat
         }
 
 
-
-
-
-
-
-
-
+        private void aGREGARToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+     FormEditarOaltaCliente nuevoForm = new FormEditarOaltaCliente(null);
+              nuevoForm.ShowDialog();
+              cargarGridView();
+        }
     }
 }
     

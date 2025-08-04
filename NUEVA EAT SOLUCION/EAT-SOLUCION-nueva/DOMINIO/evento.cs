@@ -14,7 +14,7 @@ namespace DOMINIO
 
         public DateTime _fechaFinalizacion { get; set; }
 
-        public List<cliente> _mozos { get; set; }
+        public List<Cliente> _mozos { get; set; }
 
         public int _cantidadInvitados { get; set; }
 
@@ -29,7 +29,7 @@ namespace DOMINIO
 
         public string _lugar { get; set; }
 
-        public cliente _cliente { get; set; }
+        public Cliente _cliente { get; set; }
 
 
     

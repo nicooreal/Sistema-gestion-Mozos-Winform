@@ -62,7 +62,7 @@
             this.textBoxDNI.Location = new System.Drawing.Point(130, 265);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDNI.TabIndex = 1;
+            this.textBoxDNI.TabIndex = 4;
             // 
             // textBoxNombre
             // 
@@ -82,21 +82,21 @@
             // 
             this.textBoxCorreo.Location = new System.Drawing.Point(517, 88);
             this.textBoxCorreo.Name = "textBoxCorreo";
-            this.textBoxCorreo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCorreo.Size = new System.Drawing.Size(143, 20);
             this.textBoxCorreo.TabIndex = 5;
             // 
             // textBoxTelefono
             // 
             this.textBoxTelefono.Location = new System.Drawing.Point(517, 128);
             this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefono.Size = new System.Drawing.Size(143, 20);
             this.textBoxTelefono.TabIndex = 6;
             // 
             // textBoxObservacion
             // 
             this.textBoxObservacion.Location = new System.Drawing.Point(517, 172);
             this.textBoxObservacion.Name = "textBoxObservacion";
-            this.textBoxObservacion.Size = new System.Drawing.Size(100, 20);
+            this.textBoxObservacion.Size = new System.Drawing.Size(200, 20);
             this.textBoxObservacion.TabIndex = 7;
             // 
             // textBoxApellido
@@ -104,7 +104,7 @@
             this.textBoxApellido.Location = new System.Drawing.Point(130, 128);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(100, 20);
-            this.textBoxApellido.TabIndex = 8;
+            this.textBoxApellido.TabIndex = 1;
             // 
             // labelID
             // 
@@ -114,7 +114,6 @@
             this.labelID.Size = new System.Drawing.Size(18, 13);
             this.labelID.TabIndex = 9;
             this.labelID.Text = "ID";
-          
             // 
             // labelDni
             // 
@@ -193,25 +192,27 @@
             this.buttonCancelar.Location = new System.Drawing.Point(194, 364);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelar.TabIndex = 18;
+            this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonAceptar
             // 
             this.buttonAceptar.Location = new System.Drawing.Point(498, 364);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAceptar.TabIndex = 19;
+            this.buttonAceptar.TabIndex = 9;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // dateTimePickerFechaAlta
             // 
             this.dateTimePickerFechaAlta.Location = new System.Drawing.Point(517, 219);
             this.dateTimePickerFechaAlta.Name = "dateTimePickerFechaAlta";
             this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerFechaAlta.TabIndex = 20;
+            this.dateTimePickerFechaAlta.TabIndex = 8;
             // 
             // FormEditarOaltaCliente
             // 

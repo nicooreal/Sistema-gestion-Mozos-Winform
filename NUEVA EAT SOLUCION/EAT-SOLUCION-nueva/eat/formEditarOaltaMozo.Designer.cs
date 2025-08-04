@@ -65,70 +65,70 @@
             this.textBoxLegajo.Location = new System.Drawing.Point(96, 75);
             this.textBoxLegajo.Name = "textBoxLegajo";
             this.textBoxLegajo.Size = new System.Drawing.Size(204, 20);
-            this.textBoxLegajo.TabIndex = 0;
+            this.textBoxLegajo.TabIndex = 1;
             // 
             // textBoxAltaEventual
             // 
             this.textBoxAltaEventual.Location = new System.Drawing.Point(430, 105);
             this.textBoxAltaEventual.Name = "textBoxAltaEventual";
             this.textBoxAltaEventual.Size = new System.Drawing.Size(230, 20);
-            this.textBoxAltaEventual.TabIndex = 2;
+            this.textBoxAltaEventual.TabIndex = 9;
             // 
             // textBoxTelefono
             // 
             this.textBoxTelefono.Location = new System.Drawing.Point(430, 50);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(230, 20);
-            this.textBoxTelefono.TabIndex = 4;
+            this.textBoxTelefono.TabIndex = 7;
             // 
             // textBoxTarea
             // 
             this.textBoxTarea.Location = new System.Drawing.Point(430, 183);
             this.textBoxTarea.Name = "textBoxTarea";
             this.textBoxTarea.Size = new System.Drawing.Size(230, 20);
-            this.textBoxTarea.TabIndex = 6;
+            this.textBoxTarea.TabIndex = 12;
             // 
             // textBoxCategoria
             // 
             this.textBoxCategoria.Location = new System.Drawing.Point(430, 209);
             this.textBoxCategoria.Name = "textBoxCategoria";
             this.textBoxCategoria.Size = new System.Drawing.Size(230, 20);
-            this.textBoxCategoria.TabIndex = 7;
+            this.textBoxCategoria.TabIndex = 13;
             // 
             // textBoxCuil
             // 
             this.textBoxCuil.Location = new System.Drawing.Point(96, 179);
             this.textBoxCuil.Name = "textBoxCuil";
             this.textBoxCuil.Size = new System.Drawing.Size(204, 20);
-            this.textBoxCuil.TabIndex = 9;
+            this.textBoxCuil.TabIndex = 5;
             // 
             // textBoxDni
             // 
             this.textBoxDni.Location = new System.Drawing.Point(96, 153);
             this.textBoxDni.Name = "textBoxDni";
             this.textBoxDni.Size = new System.Drawing.Size(204, 20);
-            this.textBoxDni.TabIndex = 10;
+            this.textBoxDni.TabIndex = 4;
             // 
             // textBoxApellido
             // 
             this.textBoxApellido.Location = new System.Drawing.Point(96, 127);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(204, 20);
-            this.textBoxApellido.TabIndex = 11;
+            this.textBoxApellido.TabIndex = 3;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(96, 101);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(204, 20);
-            this.textBoxNombre.TabIndex = 12;
+            this.textBoxNombre.TabIndex = 2;
             // 
             // textBoxCorreo
             // 
             this.textBoxCorreo.Location = new System.Drawing.Point(430, 79);
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(230, 20);
-            this.textBoxCorreo.TabIndex = 13;
+            this.textBoxCorreo.TabIndex = 8;
             // 
             // labelLegajo
             // 
@@ -263,7 +263,7 @@
             this.buttonAceptar.Location = new System.Drawing.Point(182, 328);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAceptar.TabIndex = 28;
+            this.buttonAceptar.TabIndex = 14;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
@@ -273,7 +273,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(478, 328);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelar.TabIndex = 29;
+            this.buttonCancelar.TabIndex = 15;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -283,14 +283,14 @@
             this.dateTimePickerFechaAlta.Location = new System.Drawing.Point(430, 158);
             this.dateTimePickerFechaAlta.Name = "dateTimePickerFechaAlta";
             this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(230, 20);
-            this.dateTimePickerFechaAlta.TabIndex = 30;
+            this.dateTimePickerFechaAlta.TabIndex = 11;
             // 
             // dateTimePickerFechaNacimiento
             // 
             this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(430, 131);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
             this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(230, 20);
-            this.dateTimePickerFechaNacimiento.TabIndex = 31;
+            this.dateTimePickerFechaNacimiento.TabIndex = 10;
             // 
             // checkBoxActivado
             // 
@@ -298,7 +298,7 @@
             this.checkBoxActivado.Location = new System.Drawing.Point(96, 55);
             this.checkBoxActivado.Name = "checkBoxActivado";
             this.checkBoxActivado.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxActivado.TabIndex = 32;
+            this.checkBoxActivado.TabIndex = 0;
             this.checkBoxActivado.UseVisualStyleBackColor = true;
             // 
             // checkBoxDisponible
@@ -307,7 +307,7 @@
             this.checkBoxDisponible.Location = new System.Drawing.Point(96, 209);
             this.checkBoxDisponible.Name = "checkBoxDisponible";
             this.checkBoxDisponible.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDisponible.TabIndex = 33;
+            this.checkBoxDisponible.TabIndex = 6;
             this.checkBoxDisponible.UseVisualStyleBackColor = true;
             // 
             // formEditarOaltaMozo
