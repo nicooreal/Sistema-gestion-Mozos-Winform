@@ -11,8 +11,7 @@ namespace DOMINIO
     {
          public int _idCliente { get; set; }
         public string _observacion { get; set; }
-
-
+        public bool _activo { get; set; }
 
 
 

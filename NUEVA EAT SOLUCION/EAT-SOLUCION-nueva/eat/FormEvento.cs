@@ -47,6 +47,8 @@ namespace eat
                 dataGridViewEventos.Columns["_cliente"].HeaderText = "Cliente";
 
 
+
+
                 // Ajustar anchos si es necesario
                 dataGridViewEventos.Columns["_nombre"].Width = 200;
                 dataGridViewEventos.Columns["_lugar"].Width = 150;

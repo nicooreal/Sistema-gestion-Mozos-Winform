@@ -15,7 +15,7 @@ namespace conexionDatos
 
             try
             {
-                datos.setearConsulta("\r\nselect P.Nombre, C.IdCliente, P.Apellido, P.Correo, P.Cuil,  P.Dni, P.FechaNacimiento, P.Telefono, C.Observacion from Cliente C inner join Persona P on C.IdPersona = P.IdPersona");
+                datos.setearConsulta("\r\nselect P.Nombre, C.IdCliente, C.Activo,P.Apellido, P.Correo, P.Cuil,  P.Dni, P.FechaNacimiento, P.Telefono, C.Observacion from Cliente C inner join Persona P on C.IdPersona = P.IdPersona");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -31,7 +31,7 @@ namespace conexionDatos
                     cliente._cuil = (long)datos.Lector["Cuil"];
                     cliente._fechaNacimiento = (DateTime)datos.Lector["FechaNacimiento"];
                     cliente._observacion = datos.Lector["Observacion"].ToString();
-                    
+                    cliente._activo = datos.Lector["Activo"] != DBNull.Value && (bool)datos.Lector["Activo"]; // Asegurarse de que Activado no sea nulo
 
 
 
@@ -82,15 +82,18 @@ namespace conexionDatos
                 datosPersona.setearParametro("@Telefono", cliente._telefono);
                 datosPersona.setearParametro("@IdCliente", cliente._idCliente);
 
+
                 datosPersona.ejecutarAccion();
 
                 // Ahora actualiza la tabla Cliente
                 datosCliente.setearConsulta(@"
             UPDATE Cliente
-            SET Observacion = @Observacion
+            SET Observacion = @Observacion,
+                   Activo = @Activo
             WHERE IdCliente = @IdCliente
         ");
 
+                datosCliente.setearParametro("@Activo", cliente._activo);
                 datosCliente.setearParametro("@Observacion", cliente._observacion);
                 datosCliente.setearParametro("@IdCliente", cliente._idCliente);
 

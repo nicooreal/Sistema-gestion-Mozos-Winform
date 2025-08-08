@@ -38,6 +38,13 @@ namespace eat
                 HeaderText = "ID"
             });
 
+            dataGridViewCliente.Columns.Add(new DataGridViewCheckBoxColumn
+            {
+                DataPropertyName = "_activo",
+                HeaderText = "Activo",
+               
+            });
+
             dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "_nombre",

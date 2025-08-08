@@ -45,6 +45,7 @@ namespace eat
                 textBoxCorreo.Text = clienteSeleccionado._correo;
                 textBoxObservacion.Text = clienteSeleccionado._observacion;
                 dateTimePickerFechaAlta.Value = clienteSeleccionado._fechaNacimiento; // Usás este control como fecha de nacimiento
+                checkBoxActivado.Checked = clienteSeleccionado._activo; // Asumiendo que tienes un CheckBox para activar/desactivar el cliente           
             }
             else
             {
@@ -114,7 +115,7 @@ namespace eat
             cliente._correo = textBoxCorreo.Text;
             cliente._observacion = textBoxObservacion.Text;
             cliente._fechaNacimiento = dateTimePickerFechaAlta.Value;
-
+            cliente._activo =checkBoxActivado.Checked; // Asumiendo que tienes un CheckBox para activar/desactivar el cliente
 
 
 

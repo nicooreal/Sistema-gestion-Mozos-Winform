@@ -48,6 +48,7 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.dateTimePickerFechaAlta = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxActivado = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxID
@@ -214,11 +215,22 @@
             this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerFechaAlta.TabIndex = 8;
             // 
+            // checkBoxActivado
+            // 
+            this.checkBoxActivado.AutoSize = true;
+            this.checkBoxActivado.Location = new System.Drawing.Point(517, 264);
+            this.checkBoxActivado.Name = "checkBoxActivado";
+            this.checkBoxActivado.Size = new System.Drawing.Size(68, 17);
+            this.checkBoxActivado.TabIndex = 18;
+            this.checkBoxActivado.Text = "Activado";
+            this.checkBoxActivado.UseVisualStyleBackColor = true;
+            // 
             // FormEditarOaltaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBoxActivado);
             this.Controls.Add(this.dateTimePickerFechaAlta);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.buttonCancelar);
@@ -268,5 +280,6 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaAlta;
+        private System.Windows.Forms.CheckBox checkBoxActivado;
     }
 }
