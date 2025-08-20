@@ -54,7 +54,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxObservacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxCliente = new System.Windows.Forms.TextBox();
+            this.textBoxPaga = new System.Windows.Forms.TextBox();
+            this.labelPaga = new System.Windows.Forms.Label();
+            this.comboBoxCliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // dateTimePickerFechaInicio
@@ -272,20 +274,39 @@
             this.label3.TabIndex = 71;
             this.label3.Text = "Cliente";
             // 
-            // textBoxCliente
+            // textBoxPaga
             // 
-            this.textBoxCliente.Location = new System.Drawing.Point(152, 214);
-            this.textBoxCliente.Name = "textBoxCliente";
-            this.textBoxCliente.Size = new System.Drawing.Size(204, 20);
-            this.textBoxCliente.TabIndex = 6;
+            this.textBoxPaga.Location = new System.Drawing.Point(485, 236);
+            this.textBoxPaga.Name = "textBoxPaga";
+            this.textBoxPaga.Size = new System.Drawing.Size(230, 20);
+            this.textBoxPaga.TabIndex = 72;
+            // 
+            // labelPaga
+            // 
+            this.labelPaga.AutoSize = true;
+            this.labelPaga.Location = new System.Drawing.Point(405, 239);
+            this.labelPaga.Name = "labelPaga";
+            this.labelPaga.Size = new System.Drawing.Size(74, 13);
+            this.labelPaga.TabIndex = 73;
+            this.labelPaga.Text = "Paga por hora";
+            // 
+            // comboBoxCliente
+            // 
+            this.comboBoxCliente.FormattingEnabled = true;
+            this.comboBoxCliente.Location = new System.Drawing.Point(152, 218);
+            this.comboBoxCliente.Name = "comboBoxCliente";
+            this.comboBoxCliente.Size = new System.Drawing.Size(204, 21);
+            this.comboBoxCliente.TabIndex = 74;
             // 
             // formEditarOaltaEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxCliente);
+            this.Controls.Add(this.labelPaga);
+            this.Controls.Add(this.textBoxPaga);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxObservacion);
             this.Controls.Add(this.textBoxEstado);
@@ -345,6 +366,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxObservacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxCliente;
+        private System.Windows.Forms.TextBox textBoxPaga;
+        private System.Windows.Forms.Label labelPaga;
+        private System.Windows.Forms.ComboBox comboBoxCliente;
     }
 }

@@ -13,6 +13,7 @@ namespace DOMINIO
         public string _observacion { get; set; }
         public bool _activo { get; set; }
 
+        public string NombreCompleto => $"{_nombre} {_apellido}";
 
 
     }

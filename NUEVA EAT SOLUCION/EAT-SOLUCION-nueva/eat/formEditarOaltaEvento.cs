@@ -14,13 +14,26 @@ namespace eat
 {
     public partial class formEditarOaltaEvento : Form
     {
+        private List<Cliente> _clientes;
+
+        public Action OnEventoEditado { get; set; }
 
 
-        public Action OnEventoEditado { get; set; } 
+        //private void formEditarEvento_Load(object sender, EventArgs e)
+        //{
+        //    CargarComboClientes();
+        //    // Si estás en modo edición, seleccioná el cliente del evento:
+        //    //if (eventoSeleccionado != null)
+        //    //    comboCliente.SelectedValue = eventoSeleccionado._cliente._idCliente;
+        //}
+
+
+
 
         public formEditarOaltaEvento(Evento evento)
         {
             InitializeComponent();
+            CargarComboClientes();
             textBoxID.Text = evento._id.ToString();
             textBoxID.ReadOnly = true;
 
@@ -33,8 +46,10 @@ namespace eat
             textBoxTipoEvento.Text = evento._tipoEvento;
             textBoxLugar.Text = evento._lugar;
             textBoxEstado.Text = evento._estado;
-            textBoxCliente.Text = evento._cliente._idCliente.ToString();
+            //    textBoxCliente.Text = evento._cliente._idCliente.ToString();
             textBoxObservacion.Text = evento._observacion;
+            textBoxPaga.Text = evento._pagaPorHora.ToString();
+
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
@@ -42,7 +57,7 @@ namespace eat
             EventoConexion eventoConec = new EventoConexion();
             Evento evento = new Evento();
 
-            
+
             evento._id = int.Parse(textBoxID.Text);
             evento._estado = textBoxEstado.Text;
             evento._nombre = textBoxNombre.Text;
@@ -54,14 +69,29 @@ namespace eat
             evento._lugar = textBoxLugar.Text;
             evento._tipoEvento = textBoxTipoEvento.Text;
             evento._presupuesto = float.Parse(textBoxPresupuesto.Text);
-          //  evento._pagaPorHora = float.Parse(textBoxPagaPorHora.Text);
-            evento._cliente._idCliente = int.Parse(textBoxCliente.Text);
-           
+            evento._pagaPorHora = float.Parse(textBoxPaga.Text);
+            //     evento._cliente._idCliente = int.Parse(textBoxCliente.Text);
+            evento._pagaPorHora = float.Parse(textBoxPaga.Text);
 
 
 
             eventoConec.cambiarPropiedad(evento);
 
+
+
+        }
+
+        private void CargarComboClientes()
+        {
+            var cliRepo = new ClienteConexion();
+            _clientes = cliRepo.listar();
+
+            comboBoxCliente.DataSource = _clientes;
+            comboBoxCliente.DisplayMember = "NombreCompleto"; // o "Nombre" si no agregás la propiedad
+            comboBoxCliente.ValueMember = "_idCliente";
+
+            // Si querés que se despliegue al hacer foco:
+            comboBoxCliente.GotFocus += (s, e) => comboBoxCliente.DroppedDown = true;
 
 
         }
