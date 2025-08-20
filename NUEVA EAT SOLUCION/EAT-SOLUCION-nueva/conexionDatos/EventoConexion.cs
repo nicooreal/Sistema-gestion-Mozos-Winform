@@ -18,7 +18,36 @@ namespace conexionDatos
             try
             {
 
-                Dat.setearConsulta("SELECT * FROM Evento");
+                Dat.setearConsulta(@"
+    SELECT 
+        E.Id,
+        E.Estado,
+        E.Nombre,
+        E.FechaInicio,
+        E.FechaFinalizacion,
+        E.CantidadInvitados,
+        E.Direccion,
+        E.Observacion,
+        E.Lugar,
+        E.TipoDeEvento,
+        E.Presupuesto,
+        E.PagaPorHora,
+        C.IdCliente,
+        C.Observacion AS ObservacionCliente,
+        C.Activo,
+        P.IdPersona,
+        P.Dni,
+        P.Nombre AS NombrePersona,
+        P.Apellido,
+        P.Cuil,
+        P.FechaNacimiento,
+        P.Correo,
+        P.Telefono
+    FROM Evento E
+    INNER JOIN Cliente C ON E.ClienteId = C.IdCliente
+    INNER JOIN Persona P ON C.IdPersona = P.IdPersona
+");
+
                 Dat.ejecutarLectura();
                 while (Dat.Lector.Read())
                 {
@@ -39,9 +68,16 @@ namespace conexionDatos
                     eventoAux._tipoEvento = (string)Dat.Lector["TipoDeEvento"];
                     eventoAux._presupuesto = Convert.ToSingle(Dat.Lector["Presupuesto"]);
                     eventoAux._pagaPorHora = Convert.ToSingle(Dat.Lector["PagaPorHora"]);
-                    eventoAux._cliente._idCliente = (int)Dat.Lector["ClienteId"];
-
-
+                    eventoAux._cliente._idCliente = (int)Dat.Lector["IdCliente"];
+                    eventoAux._cliente._observacion = (string)Dat.Lector["ObservacionCliente"];
+                    eventoAux._cliente._activo = (bool)Dat.Lector["Activo"];
+                    eventoAux._cliente._nombre = (string)Dat.Lector["NombrePersona"];
+                    eventoAux._cliente._apellido = (string)Dat.Lector["Apellido"];
+                    eventoAux._cliente._dni = (long)Dat.Lector["Dni"];
+                    eventoAux._cliente._cuil = (long)Dat.Lector["Cuil"];
+                    eventoAux._cliente._fechaNacimiento = (DateTime)Dat.Lector["FechaNacimiento"];
+                    eventoAux._cliente._correo = (string)Dat.Lector["Correo"];
+                    eventoAux._cliente._telefono = (string)Dat.Lector["Telefono"];
 
 
 

@@ -70,11 +70,17 @@
     <Compile Include="formEditarOaltaMozo.Designer.cs">
       <DependentUpon>formEditarOaltaMozo.cs</DependentUpon>
     </Compile>
-    <Compile Include="form1.cs">
+    <Compile Include="FormMozoEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form1.Designer.cs">
-      <DependentUpon>form1.cs</DependentUpon>
+    <Compile Include="FormMozoEvento.Designer.cs">
+      <DependentUpon>FormMozoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEvento.cs">
       <SubType>Form</SubType>
@@ -90,8 +96,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="form1.resx">
-      <DependentUpon>form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormMozoEvento.resx">
+      <DependentUpon>FormMozoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>

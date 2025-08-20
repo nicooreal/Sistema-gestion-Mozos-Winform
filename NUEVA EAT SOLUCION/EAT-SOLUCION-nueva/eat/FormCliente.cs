@@ -42,7 +42,7 @@ namespace eat
             {
                 DataPropertyName = "_activo",
                 HeaderText = "Activo",
-               
+                ReadOnly = true
             });
 
             dataGridViewCliente.Columns.Add(new DataGridViewTextBoxColumn

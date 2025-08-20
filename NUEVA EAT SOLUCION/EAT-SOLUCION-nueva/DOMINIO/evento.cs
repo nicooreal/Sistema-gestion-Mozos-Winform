@@ -31,7 +31,9 @@ namespace DOMINIO
 
         public Cliente _cliente { get; set; }
 
+        public string ClienteNombre => _cliente?._nombre + " " + _cliente?._apellido;
 
-    
+
+
     }
 }

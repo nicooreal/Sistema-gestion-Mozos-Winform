@@ -31,6 +31,7 @@ CREATE TABLE Mozo (
     FOREIGN KEY (IdPersona) REFERENCES Persona(IdPersona)
 );
 GO
+ALTER TABLE Cliente DROP COLUMN Activo;
 
 
 ALTER TABLE Cliente ADD Activo BIT NOT NULL DEFAULT 1;
@@ -81,6 +82,31 @@ GO
 
 select P.Nombre, P.Apellido, P.Correo,P.IdPersona,C.IdCliente, P.Cuil,  P.Dni, P.FechaNacimiento, P.Telefono, C.Observacion from Cliente C inner join Persona P on C.IdPersona = P.IdPersona
 
+select  from evento E inner join Cliente C on E.ClienteId = C.IdCliente
+
+
+SELECT 
+    E.Id,
+    E.Nombre,
+    E.Estado,
+    P.Nombre AS NombreCliente,
+    P.Apellido AS ApellidoCliente,
+    P.Correo,
+    P.Telefono,
+    E.FechaInicio,
+    E.FechaFinalizacion,
+    E.CantidadInvitados,
+    E.Direccion,
+    E.Observacion,
+    E.Lugar,
+    E.TipoDeEvento,
+    E.Presupuesto,
+    E.PagaPorHora
+FROM Evento E
+INNER JOIN Cliente C ON E.ClienteId = C.IdCliente
+INNER JOIN Persona P ON C.IdPersona = P.IdPersona;
+
+
 
 SELECT C.IdCliente, C.Observacion, P.Apellido, P.Correo, P.Cuil, P.Dni, P.FechaNacimiento, P.Nombre FROM Cliente C inner join Persona P on C.IdPersona = P.IdPersona
 
@@ -102,7 +128,7 @@ DBCC CHECKIDENT ('Cliente', RESEED, 0);
 DBCC CHECKIDENT ('Evento', RESEED, 0);
 -- EventoMozo no necesita, porque no tiene columna IDENTITY
 
-
+select P.Nombre, C.IdCliente, C.Activado, P.Apellido, P.Correo, P.Cuil,  P.Dni, P.FechaNacimiento, P.Telefono, C.Observacion from Cliente C inner join Persona P on C.IdPersona = P.IdPersona
 
 
 

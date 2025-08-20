@@ -39,7 +39,7 @@ namespace CONEXIONDATOS
                 datosMozo.setearConsulta(@"INSERT INTO Mozo (Activado, Disponible, Categoria, Tarea, FechaAlta, AltaEventual, IdPersona) 
                                    VALUES ( @Activado, @Disponible, @Categoria, @Tarea, @FechaAlta, @AltaEventual, @IdPersona)");
 
-             
+
                 datosMozo.setearParametro("@Activado", mozoNuevo._activado);
                 datosMozo.setearParametro("@Disponible", mozoNuevo._disponible);
                 datosMozo.setearParametro("@Categoria", mozoNuevo._categoria);
@@ -100,12 +100,12 @@ namespace CONEXIONDATOS
 
                 while (Dat.Lector.Read())
                 {
-                    
-                 Mozo mozoDat = new Mozo();
-           
+
+                    Mozo mozoDat = new Mozo();
+
 
                     if (!(Dat.Lector["Dni"] is DBNull))
-                        mozoDat._dni = (long)Dat.Lector["Dni"];  
+                        mozoDat._dni = (long)Dat.Lector["Dni"];
 
                     if (!(Dat.Lector["Nombre"] is DBNull))
                         mozoDat._nombre = Dat.Lector["Nombre"].ToString();
@@ -116,16 +116,16 @@ namespace CONEXIONDATOS
 
                     if (!(Dat.Lector["Cuil"] is DBNull))
                         mozoDat._cuil = (long)Dat.Lector["Cuil"];
- 
-                   if (!(Dat.Lector["FechaNacimiento"] is DBNull))
+
+                    if (!(Dat.Lector["FechaNacimiento"] is DBNull))
                         mozoDat._fechaNacimiento = (DateTime)Dat.Lector["FechaNacimiento"];
 
                     if (!(Dat.Lector["Correo"] is DBNull))
                         mozoDat._correo = Dat.Lector["Correo"].ToString();
 
                     if (!(Dat.Lector["Telefono"] is DBNull))
-                        mozoDat._telefono = Dat.Lector["Telefono"].ToString();   
-                    
+                        mozoDat._telefono = Dat.Lector["Telefono"].ToString();
+
 
 
 
@@ -162,7 +162,7 @@ namespace CONEXIONDATOS
             }
             catch (Exception ex)
             {
-              
+
                 throw ex;
             }
             finally
@@ -171,7 +171,7 @@ namespace CONEXIONDATOS
             }
         }
 
-        public  int  cambiarPropiedad(Mozo mozo)
+        public int cambiarPropiedad(Mozo mozo)
         {
             AccesoDatos datosPersona = new AccesoDatos();
             AccesoDatos datosMozo = new AccesoDatos();
@@ -195,13 +195,13 @@ WHERE M.Legajo = @Legajo");
                 datosMozo.setearParametro("@FechaAlta", mozo._fechaAlta);
                 datosMozo.setearParametro("@AltaEventual", mozo._altaEventual);
                 datosMozo.setearParametro("@Legajo", mozo._legajo);
-          
-                
+
+
                 datosMozo.ejecutarAccion();
 
                 datosPersona.setearConsulta(
-                    
-                    
+
+
  @"UPDATE P
 SET 
     P.Nombre = @Nombre,
@@ -246,10 +246,10 @@ WHERE M.Legajo = @Legajo"
 
 
 
-    
 
 
-    public List<Mozo> listarActivados()
+
+        public List<Mozo> listarActivados()
         {
             List<Mozo> lista = new List<Mozo>();
             lista = listar();
@@ -275,7 +275,7 @@ WHERE M.Legajo = @Legajo"
         {
             List<Mozo> lista = new List<Mozo>();
             lista = listar();
-            
+
             for (int i = 0; i < lista.Count; i++)
             {
                 if (lista[i]._disponible == false)
@@ -300,9 +300,70 @@ WHERE M.Legajo = @Legajo"
 
 
 
+
+
+        public List<Mozo> listarPorEvento(int eventoId)
+        {
+            var lista = new List<Mozo>();
+            var datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta(@"
+            SELECT 
+                m.Legajo,
+                m.Activado,
+                m.Disponible,
+                m.Categoria,
+                m.Tarea,
+                m.FechaAlta,
+                m.AltaEventual,
+                p.IdPersona,
+                p.Dni,
+                p.Nombre,
+                p.Apellido,
+                p.Cuil,
+                p.FechaNacimiento,
+                p.Correo,
+                p.Telefono
+            FROM EventoMozo em
+            INNER JOIN Mozo m ON em.LegajoMozo = m.Legajo
+            INNER JOIN Persona p ON m.IdPersona = p.IdPersona
+            WHERE em.EventoId = @EventoId
+        ");
+                datos.setearParametro("@EventoId", eventoId);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    var mozo = new Mozo
+                    {
+                        _legajo = (int)datos.Lector["Legajo"],
+                        _activado = (bool)datos.Lector["Activado"],
+                        _disponible = (bool)datos.Lector["Disponible"],
+                        _categoria = datos.Lector["Categoria"] as string,
+                        _tarea = datos.Lector["Tarea"] as string,
+                        _fechaAlta = (DateTime)datos.Lector["FechaAlta"],
+                        _altaEventual = datos.Lector["AltaEventual"] as string,
+                        _dni = (long)datos.Lector["Dni"],
+                        _nombre = (string)datos.Lector["Nombre"],
+                        _apellido = (string)datos.Lector["Apellido"],
+                        _cuil = (long)datos.Lector["Cuil"],
+                        _fechaNacimiento = (DateTime)datos.Lector["FechaNacimiento"],
+                        _correo = datos.Lector["Correo"] as string,
+                        _telefono = datos.Lector["Telefono"] as string
+                    };
+                    lista.Add(mozo);
+                }
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            return lista;
+        }
+
+
+
     }
-
-
-
-
-    }
+}

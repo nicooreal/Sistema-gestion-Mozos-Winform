@@ -42,9 +42,9 @@ namespace eat
                 dataGridViewEventos.Columns["_estado"].HeaderText = "Estado";
                 dataGridViewEventos.Columns["_pagaPorHora"].HeaderText = "Paga por Hora";
                 dataGridViewEventos.Columns["_presupuesto"].HeaderText = "Presupuesto";
-                dataGridViewEventos.Columns["_observacion"].HeaderText = "Observación";
+               dataGridViewEventos.Columns["_observacion"].HeaderText = "Observación";
                 dataGridViewEventos.Columns["_direccion"].HeaderText = "Direccion";
-                dataGridViewEventos.Columns["_cliente"].HeaderText = "Cliente";
+             dataGridViewEventos.Columns["ClienteNombre"].HeaderText = "Cliente";
 
 
 
