@@ -70,17 +70,23 @@ namespace eat
             evento._tipoEvento = textBoxTipoEvento.Text;
             evento._presupuesto = float.Parse(textBoxPresupuesto.Text);
             evento._pagaPorHora = float.Parse(textBoxPaga.Text);
-            //     evento._cliente._idCliente = int.Parse(textBoxCliente.Text);
-            evento._pagaPorHora = float.Parse(textBoxPaga.Text);
+        
 
+            var cli = comboBoxCliente.SelectedItem as Cliente;
+
+            evento._cliente = new Cliente();
+            evento._cliente._idCliente = cli._idCliente;
 
 
             eventoConec.cambiarPropiedad(evento);
 
+            MessageBox.Show("Los cambios se han guardado correctamente.", "Edición Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
 
-
+            OnEventoEditado?.Invoke();
+          
+   
         }
-
         private void CargarComboClientes()
         {
             var cliRepo = new ClienteConexion();
@@ -94,6 +100,12 @@ namespace eat
             comboBoxCliente.GotFocus += (s, e) => comboBoxCliente.DroppedDown = true;
 
 
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No se han guardado los cambios.", "Edición Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        this.Close();
         }
     }
 }

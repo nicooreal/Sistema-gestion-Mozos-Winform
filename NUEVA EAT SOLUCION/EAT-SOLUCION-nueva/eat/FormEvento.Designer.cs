@@ -37,7 +37,7 @@
             this.dataGridViewEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEventos.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewEventos.Name = "dataGridViewEventos";
-            this.dataGridViewEventos.Size = new System.Drawing.Size(1962, 606);
+            this.dataGridViewEventos.Size = new System.Drawing.Size(1649, 606);
             this.dataGridViewEventos.TabIndex = 0;
             this.dataGridViewEventos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEventos_CellContentClick);
             // 
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1966, 630);
+            this.ClientSize = new System.Drawing.Size(1708, 630);
             this.Controls.Add(this.dataGridViewEventos);
             this.Name = "FormEvento";
             this.Text = "FormEvento";
