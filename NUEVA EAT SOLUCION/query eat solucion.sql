@@ -70,12 +70,17 @@ GO
 CREATE TABLE EventoMozo (
     EventoId INT,
     LegajoMozo INT,
+    HorarioEntrada DATETIME NULL,
+    HorarioSalida DATETIME NULL,
+    Plus DECIMAL(10,2) NULL,
+    NombreDelPLus VARCHAR(20),
+	RolDelPersonal VARCHAR(40) NULL
+
     PRIMARY KEY (EventoId, LegajoMozo),
     FOREIGN KEY (EventoId) REFERENCES Evento(Id),
     FOREIGN KEY (LegajoMozo) REFERENCES Mozo(Legajo)
 );
 GO
-
 
 
 

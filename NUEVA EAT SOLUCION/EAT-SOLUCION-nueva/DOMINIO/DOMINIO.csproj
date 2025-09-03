@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="EventoMozo.cs" />
     <Compile Include="Mozo.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="Persona.cs" />

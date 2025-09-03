@@ -44,6 +44,7 @@
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="ClienteConexion.cs" />
     <Compile Include="EventoConexion.cs" />
+    <Compile Include="EventoMozoConexion.cs" />
     <Compile Include="MozoConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -14,7 +14,7 @@ namespace DOMINIO
 
         public DateTime fechaFinalizacion { get; set; }
 
-        public List<Cliente> mozos { get; set; }
+        public List<Mozo> listaMozos { get; set; }
 
         public int cantidadInvitados { get; set; }
 

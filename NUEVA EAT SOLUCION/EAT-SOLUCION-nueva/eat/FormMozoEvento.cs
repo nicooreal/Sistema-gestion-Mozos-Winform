@@ -33,10 +33,13 @@ namespace eat
 
         public void cargarGridViewMozosPorEvento(int idEvento)
         {
-            MozoConexion conec = new MozoConexion();
-            List<Mozo> lista = conec.listarPorEvento(idEvento);
+            EventoMozoConexion conec = new EventoMozoConexion();
+            
+             EventoMozo eveMoz = new EventoMozo();
+            List<EventoMozo> lista = conec.listarPorEvento(idEvento);
+          //  evento.listaMozos = lista;
 
-         //   dataGridViewEventoMozo.ClearSelection();
+            //   dataGridViewEventoMozo.ClearSelection();
             dataGridViewEventoMozo.DataSource = lista;
             // cargaColumnasDeGridView();
         }
