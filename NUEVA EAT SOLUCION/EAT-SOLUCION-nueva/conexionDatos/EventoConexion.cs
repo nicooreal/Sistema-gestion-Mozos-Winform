@@ -54,30 +54,30 @@ namespace conexionDatos
                     Evento eventoAux = new Evento();
                     Cliente clienteAux = new Cliente();
                   
-                    eventoAux._cliente = clienteAux;
+                    eventoAux.cliente = clienteAux;
                     
-                    eventoAux._id = (int)Dat.Lector["Id"];
-                    eventoAux._estado = (string)Dat.Lector["Estado"];
-                    eventoAux._nombre = (string)Dat.Lector["Nombre"];
-                    eventoAux._fechaInicio = (DateTime)Dat.Lector["FechaInicio"];
-                    eventoAux._fechaFinalizacion = (DateTime)Dat.Lector["FechaFinalizacion"];
-                    eventoAux._cantidadInvitados = (int)Dat.Lector["CantidadInvitados"];
-                    eventoAux._direccion = (string)Dat.Lector["Direccion"];
-                    eventoAux._observacion = (string)Dat.Lector["Observacion"];
-                    eventoAux._lugar = (string)Dat.Lector["Lugar"];
-                    eventoAux._tipoEvento = (string)Dat.Lector["TipoDeEvento"];
-                    eventoAux._presupuesto = Convert.ToSingle(Dat.Lector["Presupuesto"]);
-                    eventoAux._pagaPorHora = Convert.ToSingle(Dat.Lector["PagaPorHora"]);
-                    eventoAux._cliente._idCliente = (int)Dat.Lector["IdCliente"];
-                    eventoAux._cliente._observacion = (string)Dat.Lector["ObservacionCliente"];
-                    eventoAux._cliente._activo = (bool)Dat.Lector["Activo"];
-                    eventoAux._cliente._nombre = (string)Dat.Lector["NombrePersona"];
-                    eventoAux._cliente._apellido = (string)Dat.Lector["Apellido"];
-                    eventoAux._cliente._dni = (long)Dat.Lector["Dni"];
-                    eventoAux._cliente._cuil = (long)Dat.Lector["Cuil"];
-                    eventoAux._cliente._fechaNacimiento = (DateTime)Dat.Lector["FechaNacimiento"];
-                    eventoAux._cliente._correo = (string)Dat.Lector["Correo"];
-                    eventoAux._cliente._telefono = (string)Dat.Lector["Telefono"];
+                    eventoAux.id = (int)Dat.Lector["Id"];
+                    eventoAux.estado = (string)Dat.Lector["Estado"];
+                    eventoAux.nombre = (string)Dat.Lector["Nombre"];
+                    eventoAux.fechaInicio = (DateTime)Dat.Lector["FechaInicio"];
+                    eventoAux.fechaFinalizacion = (DateTime)Dat.Lector["FechaFinalizacion"];
+                    eventoAux.cantidadInvitados = (int)Dat.Lector["CantidadInvitados"];
+                    eventoAux.direccion = (string)Dat.Lector["Direccion"];
+                    eventoAux.observacion = (string)Dat.Lector["Observacion"];
+                    eventoAux.lugar = (string)Dat.Lector["Lugar"];
+                    eventoAux.tipoDeEvento = (string)Dat.Lector["TipoDeEvento"];
+                    eventoAux.presupuesto = Convert.ToSingle(Dat.Lector["Presupuesto"]);
+                    eventoAux.pagaPorHora = Convert.ToSingle(Dat.Lector["PagaPorHora"]);
+                    eventoAux.cliente._idCliente = (int)Dat.Lector["IdCliente"];
+                    eventoAux.cliente._observacion = (string)Dat.Lector["ObservacionCliente"];
+                    eventoAux.cliente._activo = (bool)Dat.Lector["Activo"];
+                    eventoAux.cliente._nombre = (string)Dat.Lector["NombrePersona"];
+                    eventoAux.cliente._apellido = (string)Dat.Lector["Apellido"];
+                    eventoAux.cliente._dni = (long)Dat.Lector["Dni"];
+                    eventoAux.cliente._cuil = (long)Dat.Lector["Cuil"];
+                    eventoAux.cliente._fechaNacimiento = (DateTime)Dat.Lector["FechaNacimiento"];
+                    eventoAux.cliente._correo = (string)Dat.Lector["Correo"];
+                    eventoAux.cliente._telefono = (string)Dat.Lector["Telefono"];
 
 
 
@@ -124,19 +124,19 @@ namespace conexionDatos
             WHERE Id = @Id
         ");
 
-                datosEvento.setearParametro("@Estado", evento._estado);
-                datosEvento.setearParametro("@Nombre", evento._nombre);
-                datosEvento.setearParametro("@FechaInicio", evento._fechaInicio);
-                datosEvento.setearParametro("@FechaFinalizacion", evento._fechaFinalizacion);
-                datosEvento.setearParametro("@CantidadInvitados", evento._cantidadInvitados);
-                datosEvento.setearParametro("@Direccion", evento._direccion);
-                datosEvento.setearParametro("@Observacion", evento._observacion);
-                datosEvento.setearParametro("@Presupuesto", evento._presupuesto);
-                datosEvento.setearParametro("@ClienteId", evento._cliente._idCliente);
-                datosEvento.setearParametro("@PagaPorHora", evento._pagaPorHora);
-                datosEvento.setearParametro("@Lugar", evento._lugar);
-                datosEvento.setearParametro("@TipoDeEvento", evento._tipoEvento);
-                datosEvento.setearParametro("@Id", evento._id);
+                datosEvento.setearParametro("@Estado", evento.estado);
+                datosEvento.setearParametro("@Nombre", evento.nombre);
+                datosEvento.setearParametro("@FechaInicio", evento.fechaInicio);
+                datosEvento.setearParametro("@FechaFinalizacion", evento.fechaFinalizacion);
+                datosEvento.setearParametro("@CantidadInvitados", evento.cantidadInvitados);
+                datosEvento.setearParametro("@Direccion", evento.direccion);
+                datosEvento.setearParametro("@Observacion", evento.observacion);
+                datosEvento.setearParametro("@Presupuesto", evento.presupuesto);
+                datosEvento.setearParametro("@ClienteId", evento.cliente._idCliente);
+                datosEvento.setearParametro("@PagaPorHora", evento.pagaPorHora);
+                datosEvento.setearParametro("@Lugar", evento.lugar);
+                datosEvento.setearParametro("@TipoDeEvento", evento.tipoDeEvento);
+                datosEvento.setearParametro("@Id", evento.id);
 
                 datosEvento.ejecutarAccion();
             }

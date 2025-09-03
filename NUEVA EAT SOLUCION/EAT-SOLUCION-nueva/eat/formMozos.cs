@@ -30,8 +30,8 @@ namespace eat
             InitializeComponent();
             this.eventoSeleccionado = evento;
 
-            if (eventoSeleccionado != null)
-                cargarGridViewMozosPorEvento(eventoSeleccionado._id);
+            //if (eventoSeleccionado != null)
+            //    cargarGridViewMozosPorEvento(eventoSeleccionado._id);
           
         }
 
@@ -42,17 +42,17 @@ namespace eat
 
             try
             {
-                if (eventoSeleccionado != null)
-                {
-                    // Mostrar SOLO los mozos del evento
-               cargaColumnasDeGridView();
-                    cargarGridViewMozosPorEvento(eventoSeleccionado._id);
-                }
-                else
-                {
-                    // Modo general: todos / activados / etc.
+               // if (eventoSeleccionado != null)
+               // {
+               //     // Mostrar SOLO los mozos del evento
+               //cargaColumnasDeGridView();
+               //     cargarGridViewMozosPorEvento(eventoSeleccionado._id);
+               // }
+               // else
+               // {
+               //     // Modo general: todos / activados / etc.
+               // }
                     cargarGridViewNormal();
-                }
             }
             catch (Exception)
             {
@@ -63,15 +63,15 @@ namespace eat
         }
 
         
-        public void cargarGridViewMozosPorEvento(int idEvento)
-        {
-            MozoConexion conec = new MozoConexion();
-            List<Mozo> lista = conec.listarPorEvento(idEvento);
+        //public void cargarGridViewMozosPorEvento(int idEvento)
+        //{
+        //    MozoConexion conec = new MozoConexion();
+        //    List<Mozo> lista = conec.listarPorEvento(idEvento);
 
-            dataGridViewMozos.ClearSelection();
-            dataGridViewMozos.DataSource = lista;
-           // cargaColumnasDeGridView();
-        }
+        //    dataGridViewMozos.ClearSelection();
+        //    dataGridViewMozos.DataSource = lista;
+        //   // cargaColumnasDeGridView();
+        //}
 
 
 

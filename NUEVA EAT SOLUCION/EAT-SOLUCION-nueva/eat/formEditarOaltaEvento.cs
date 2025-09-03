@@ -34,21 +34,21 @@ namespace eat
         {
             InitializeComponent();
             CargarComboClientes();
-            textBoxID.Text = evento._id.ToString();
+            textBoxID.Text = evento.id.ToString();
             textBoxID.ReadOnly = true;
 
-            dateTimePickerFechaFinal.Value = evento._fechaInicio;
-            dateTimePickerFechaInicio.Value = evento._fechaFinalizacion;
-            textBoxCantidadDeInvitados.Text = evento._cantidadInvitados.ToString();
-            textBoxDireccion.Text = evento._direccion;
-            textBoxNombre.Text = evento._nombre;
-            textBoxPresupuesto.Text = evento._presupuesto.ToString();
-            textBoxTipoEvento.Text = evento._tipoEvento;
-            textBoxLugar.Text = evento._lugar;
-            textBoxEstado.Text = evento._estado;
+            dateTimePickerFechaFinal.Value = evento.fechaInicio;
+            dateTimePickerFechaInicio.Value = evento.fechaFinalizacion;
+            textBoxCantidadDeInvitados.Text = evento.cantidadInvitados.ToString();
+            textBoxDireccion.Text = evento.direccion;
+            textBoxNombre.Text = evento.nombre;
+            textBoxPresupuesto.Text = evento.presupuesto.ToString();
+            textBoxTipoEvento.Text = evento.tipoDeEvento;
+            textBoxLugar.Text = evento.lugar;
+            textBoxEstado.Text = evento.estado;
             //    textBoxCliente.Text = evento._cliente._idCliente.ToString();
-            textBoxObservacion.Text = evento._observacion;
-            textBoxPaga.Text = evento._pagaPorHora.ToString();
+            textBoxObservacion.Text = evento.observacion;
+            textBoxPaga.Text = evento.pagaPorHora.ToString();
 
         }
 
@@ -58,24 +58,24 @@ namespace eat
             Evento evento = new Evento();
 
 
-            evento._id = int.Parse(textBoxID.Text);
-            evento._estado = textBoxEstado.Text;
-            evento._nombre = textBoxNombre.Text;
-            evento._fechaInicio = dateTimePickerFechaInicio.Value;
-            evento._fechaFinalizacion = dateTimePickerFechaFinal.Value;
-            evento._cantidadInvitados = int.Parse(textBoxCantidadDeInvitados.Text);
-            evento._direccion = textBoxDireccion.Text;
-            evento._observacion = textBoxObservacion.Text;
-            evento._lugar = textBoxLugar.Text;
-            evento._tipoEvento = textBoxTipoEvento.Text;
-            evento._presupuesto = float.Parse(textBoxPresupuesto.Text);
-            evento._pagaPorHora = float.Parse(textBoxPaga.Text);
+            evento.id = int.Parse(textBoxID.Text);
+            evento.estado = textBoxEstado.Text;
+            evento.nombre = textBoxNombre.Text;
+            evento.fechaInicio = dateTimePickerFechaInicio.Value;
+            evento.fechaFinalizacion = dateTimePickerFechaFinal.Value;
+            evento.cantidadInvitados = int.Parse(textBoxCantidadDeInvitados.Text);
+            evento.direccion = textBoxDireccion.Text;
+            evento.observacion = textBoxObservacion.Text;
+            evento.lugar = textBoxLugar.Text;
+            evento.tipoDeEvento = textBoxTipoEvento.Text;
+            evento.presupuesto = float.Parse(textBoxPresupuesto.Text);
+            evento.pagaPorHora = float.Parse(textBoxPaga.Text);
         
 
             var cli = comboBoxCliente.SelectedItem as Cliente;
 
-            evento._cliente = new Cliente();
-            evento._cliente._idCliente = cli._idCliente;
+            evento.cliente = new Cliente();
+            evento.cliente._idCliente = cli._idCliente;
 
 
             eventoConec.cambiarPropiedad(evento);
