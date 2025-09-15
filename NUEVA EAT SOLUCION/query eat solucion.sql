@@ -82,6 +82,11 @@ CREATE TABLE EventoMozo (
 );
 GO
 
+INSERT INTO EventoMozo (EventoId, LegajoMozo, HorarioEntrada, HorarioSalida, Plus, RolDelPersonal)
+VALUES
+(1, 3, '2025-09-10 17:30:00', '2025-09-10 23:30:00', 3000.00, 'Bartender'),
+(1, 4, '2025-09-10 18:00:00', '2025-09-10 22:00:00', 2000.00, 'Recepción'),
+(1, 5, '2025-09-10 19:00:00', '2025-09-10 23:00:00', 0.00, 'Mozo eventual');
 
 
 

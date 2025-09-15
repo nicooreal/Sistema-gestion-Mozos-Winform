@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using CONEXIONDATOS; // o tu namespace de AccesoDatos
 using DOMINIO;
 using negocio;
@@ -93,9 +94,11 @@ public class EventoMozoConexion
     // (Opcional) útil para el botón "MOZOS" en un evento específico:
     public List<EventoMozo> listarPorEvento(int eventoId)
     {
-        var lista = new List<EventoMozo>();
-        var datos = new AccesoDatos();
+    
+        List<EventoMozo> listaeventoMozos = new List<EventoMozo>();
+        AccesoDatos datos = new AccesoDatos();
 
+ 
         try
         {
             datos.setearConsulta(@"
@@ -133,43 +136,48 @@ public class EventoMozoConexion
 
             while (datos.Lector.Read())
             {
-                var item = new EventoMozo
-                {
-                    EventoId = (int)datos.Lector["EventoId"],
-                    LegajoMozo = (int)datos.Lector["LegajoMozo"],
+                
+                EventoMozo eventMoz = new EventoMozo();
 
-                    HorarioEntrada = (DateTime)datos.Lector["HorarioEntrada"],
-                    HorarioSalida = (DateTime)datos.Lector["HorarioSalida"],
-                    Plus = datos.Lector["Plus"] == DBNull.Value ? 0m : Convert.ToDecimal(datos.Lector["Plus"]),
-                    RolDelPersonal = datos.Lector["RolDelPersonal"] as string,
+                eventMoz.EventoId = (int)datos.Lector["EventoId"];
+                eventMoz.LegajoMozo = (int)datos.Lector["LegajoMozo"];
 
-                    Mozo = new Mozo
-                    {
-                        _legajo = (int)datos.Lector["LegajoMozo"],        // o (int)datos.Lector["Legajo"]
-                        _activado = (bool)datos.Lector["Activado"],
-                        _disponible = (bool)datos.Lector["Disponible"],
-                        _categoria = datos.Lector["Categoria"] as string,
-                        _tarea = datos.Lector["Tarea"] as string,
-                        _fechaAlta = (DateTime)datos.Lector["FechaAlta"],
-                        _altaEventual = datos.Lector["AltaEventual"] as string,
+                eventMoz.Plus = datos.Lector["Plus"] == DBNull.Value ? 0m : Convert.ToDecimal(datos.Lector["Plus"]);
+                eventMoz.RolDelPersonal = datos.Lector["RolDelPersonal"] as string;
+                eventMoz.HorarioEntrada = (DateTime)datos.Lector["HorarioEntrada"];
+                eventMoz.HorarioSalida = (DateTime)datos.Lector["HorarioSalida"];
 
-                        _dni = (long)datos.Lector["Dni"],
-                        _nombre = (string)datos.Lector["Nombre"],
-                        _apellido = (string)datos.Lector["Apellido"],
-                        _cuil = (long)datos.Lector["Cuil"],
-                        _fechaNacimiento = (DateTime)datos.Lector["FechaNacimiento"],
-                        _correo = datos.Lector["Correo"] as string,
-                        _telefono = datos.Lector["Telefono"] as string
-                    }
-                };
-                lista.Add(item);
+                Mozo moz = new Mozo();
+
+                moz._legajo = (int)datos.Lector["LegajoMozo"];        // o (int)datos.Lector["Legajo"]
+                moz._activado = (bool)datos.Lector["Activado"];
+                moz._disponible = (bool)datos.Lector["Disponible"];
+                moz._categoria = datos.Lector["Categoria"] as string;
+                moz._tarea = datos.Lector["Tarea"] as string;
+                moz._fechaAlta = (DateTime)datos.Lector["FechaAlta"];
+                moz._altaEventual = datos.Lector["AltaEventual"] as string;
+                moz._dni = (long)datos.Lector["Dni"];
+                moz._nombre = (string)datos.Lector["Nombre"];
+                moz._apellido = (string)datos.Lector["Apellido"];
+                moz._cuil = (long)datos.Lector["Cuil"];
+                moz._fechaNacimiento = (DateTime)datos.Lector["FechaNacimiento"];
+                moz._correo = datos.Lector["Correo"] as string;
+                moz._telefono = datos.Lector["Telefono"] as string;
+           
+            eventMoz.Mozo = moz;
+
+                listaeventoMozos.Add(eventMoz);
             }
+            
         }
         finally
         {
             datos.cerrarConexion();
         }
 
-        return lista;
+        return listaeventoMozos;
+   
+    
+    
     }
 }
