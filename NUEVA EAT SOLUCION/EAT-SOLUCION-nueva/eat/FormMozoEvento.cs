@@ -37,11 +37,36 @@ namespace eat
             
              EventoMozo eveMoz = new EventoMozo();
             List<EventoMozo> lista = conec.listarPorEvento(idEvento);
-          //  evento.listaMozos = lista;
 
-            //   dataGridViewEventoMozo.ClearSelection();
-            dataGridViewEventoMozo.DataSource = lista;
-            // cargaColumnasDeGridView();
+          
+
+            var vm = lista.Select(x => new
+            {
+                x.EventoId,
+                x.LegajoMozo,
+                x.HorarioEntrada,
+                x.HorarioSalida,
+                x.Plus,
+                x.RolDelPersonal,
+
+                // 🔽 columnas “planas” que salen de la propiedad calculada y de Mozo
+                Mozo = x.MozoDisplay,
+                Categoria = x.Mozo?._categoria,
+                Tarea = x.Mozo?._tarea,
+                Disponible = x.Mozo?._disponible,
+                Activado = x.Mozo?._activado,
+                DNI = x.Mozo?._dni,
+                CUIL = x.Mozo?._cuil,
+                Correo = x.Mozo?._correo,
+                Telefono = x.Mozo?._telefono
+            }).ToList();
+
+            dataGridViewEventoMozo.AutoGenerateColumns = true;   // o false si querés armar columnas a mano
+            dataGridViewEventoMozo.DataSource = vm;
+
+            // (Opcional) formatos
+    
+
         }
 
 

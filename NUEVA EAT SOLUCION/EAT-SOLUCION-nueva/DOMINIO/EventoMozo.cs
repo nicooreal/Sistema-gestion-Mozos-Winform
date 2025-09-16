@@ -20,5 +20,15 @@ namespace DOMINIO
         public Evento Evento { get; set; }
 
         public Mozo Mozo { get; set; }
+
+        public string MozoDisplay =>
+        Mozo == null ? "" : $"{Mozo._legajo} - {Mozo._apellido}, {Mozo._nombre}";
+
+
+
     }
+
+
+
+
 }
